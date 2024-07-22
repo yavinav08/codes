@@ -44,3 +44,22 @@ if items is not None:
 
         # Return new CustomPanel with reindexed columns
         return CustomPanel(reindexed_columns)
+
+# Truncate doc
+"""
+    Truncate the CustomPanel before and/or after some particular index values.
+
+    Parameters:
+    before : date, string, int, or None, optional
+        Truncate all rows before this index value.
+    after : date, string, int, or None, optional
+        Truncate all rows after this index value.
+    axis : {0, 1, 2, 'items', 'major_axis', 'minor_axis'}, optional
+        Axis along which to truncate.
+    copy : bool, default True
+        If True, return a copy even if no truncation is necessary.
+
+    Returns:
+    CustomPanel
+        A new CustomPanel object with truncated data.
+    """
