@@ -1,3 +1,24 @@
+"""
+    Conform the CustomPanel to new indexes with optional filling logic.
+
+    Parameters:
+    items : array-like, optional
+        New items to conform to.
+    major_axis : array-like, optional
+        New major axis to conform to.
+    minor_axis : array-like, optional
+        New minor axis to conform to.
+    method : {'pad', 'ffill', 'backfill', 'bfill', 'nearest'}, optional
+        Method to use for filling holes in reindexed data.
+    fill_value : scalar, default None
+        Value to use for missing values.
+    limit : int, default None
+        Maximum number of consecutive elements to fill.
+
+    Returns:
+    CustomPanel
+        A new CustomPanel object with reindexed data.
+    """
 if items is not None:
         # Create an empty DataFrame with the new items
         new_columns = pd.DataFrame(index=self.index, columns=items)
